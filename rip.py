@@ -71,6 +71,3 @@ d = {
 'duration':'19',
 'filename':'inp'
 }
-
-
-rip(d)

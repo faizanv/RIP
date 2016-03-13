@@ -35,7 +35,7 @@ def rip(d):
     subprocess.call(['clear'], shell=True)
 
 
-    return
+    return file_out
 
 
 def optionAdd(*strings):

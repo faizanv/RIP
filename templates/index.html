@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+		<link rel="icon" href="logo.png"
 
     <title>rip</title>
 
@@ -102,8 +103,11 @@
 					type: "post",
 					data: JSON.stringify(data),
 					contentType: "application/json",
-					success: function() {
-						alert("Its LIT");
+					success: function(ret) {
+						$(".content").append("<button class='button btn-primary' href='" + ret + "' target='_blank'>Download</a>");
+					},
+					error: function(e) {
+						console.error(e);
 					}
 				});
 			}

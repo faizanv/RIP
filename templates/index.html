@@ -62,11 +62,17 @@
     </header>
     <div class = "content">
         <img class="img-responsive img-center" src="logo.png" alt="">
-          <input type="text" class="input-medium"  placeholder="Enter YouTube Link" id="link">
-					<input type="text" class="input-medium" placeholder="Start Time" id="startTime">
-          <input type = "text" class = "input-medium" placeholder = "Duration" id="duration">
-          <input type = "text" class = "input-medium" placeholder = "Filename" id="filename">
-          <button class="btn btn-primary" type="submit" id="itslit">Generate</button>
+					<div class="container">
+						<div class="row">
+							<input type="text" class="input-medium"  placeholder="Enter YouTube Link" id="link">
+							<input type="text" class="input-medium" placeholder="Start Time" id="startTime">
+		          <input type = "text" class = "input-medium" placeholder = "Duration" id="duration">
+		          <input type = "text" class = "input-medium" placeholder = "Filename" id="filename">
+						</div>
+						<div class="row" style="margin-top:2%;">
+							<button class="btn btn-primary btn-large" type="submit" id="itslit">RIP</button>
+						</div>
+					</div>
     </div>
     <!-- Footer -->
     <footer>
@@ -104,7 +110,7 @@
 					data: JSON.stringify(data),
 					contentType: "application/json",
 					success: function(ret) {
-						$(".content").append("<button class='button btn-primary' href='" + ret + "' target='_blank'>Download</a>");
+						window.location = ret;
 					},
 					error: function(e) {
 						console.error(e);
